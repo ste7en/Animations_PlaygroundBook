@@ -6,8 +6,8 @@ public class IntroPageViewController: UIPageViewController, UIPageViewController
         self.init(transitionStyle: .scroll, navigationOrientation: .horizontal)
     }
     
-    var pages = [UIViewController]()
-    let pageControl = UIPageControl()
+    var pages: [UIViewController] = [UIViewController]()
+    let pageControl: UIPageControl = UIPageControl()
 //    var colors: [UIColor] = {
 //        return self.pages.map { $0.backgroundColor }
 //    }()
@@ -91,8 +91,8 @@ public class IntroPageViewController: UIPageViewController, UIPageViewController
     
     private func setPageControl() {
         self.pageControl.frame = CGRect()
-        self.pageControl.currentPageIndicatorTintColor = UIColor.black
-        self.pageControl.pageIndicatorTintColor = UIColor.lightGray
+        self.pageControl.currentPageIndicatorTintColor = UIColor(fromHex: 0xBAAD91)
+        self.pageControl.pageIndicatorTintColor = UIColor(white: 1.0, alpha: 1/3)
         self.pageControl.numberOfPages = self.pages.count
         self.pageControl.currentPage = 0
         self.view.addSubview(self.pageControl)
@@ -168,20 +168,3 @@ extension IntroPageViewController: UIScrollViewDelegate {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

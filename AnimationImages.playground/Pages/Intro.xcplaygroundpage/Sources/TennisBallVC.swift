@@ -12,9 +12,11 @@ public class TennisBallViewController: ViewController {
         tennisBallAnimation.constrainToCenter(of: self.view)
         tennisBallAnimation.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.leadingAnchor, constant: 16).isActive = true
         tennisBallAnimation.trailingAnchor.constraint(lessThanOrEqualTo: self.view.trailingAnchor, constant: -16).isActive = true
+        tennisBallAnimation.heightAnchor.constraint(equalTo: tennisBallAnimation.widthAnchor, multiplier: tennisBallAnimation.imageAspectRatio).isActive = true
     }
     
     override public func viewDidLoad() {
+        super.viewDidLoad()
         for i in 0...5 {
             if let image = UIImage(named: "TennisBall/ball\(i).png") {
                 tennisBallFrames.append(image)
@@ -22,8 +24,10 @@ public class TennisBallViewController: ViewController {
         }
         self.tennisBallAnimation.transform  = CGAffineTransform(scaleX: 0.5, y: 0.5)
         self.tennisBallAnimation.setAnimation(sequence: tennisBallFrames, time: 0.8)
-        self.tennisBallAnimation.startAnimating()
-
+        let animateTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(animate(tapGestureRecognizer:)))
+        self.tennisBallAnimation.isUserInteractionEnabled = true
+        self.tennisBallAnimation.addGestureRecognizer(animateTapGestureRecognizer)
+        self.tennisBallAnimation.layer.borderWidth = 1
     }
     
 }

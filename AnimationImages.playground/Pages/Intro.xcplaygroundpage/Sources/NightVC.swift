@@ -12,11 +12,13 @@ public class NightViewController: ViewController {
         nightAnimation.constrainToCenter(of: self.view)
         nightAnimation.leadingAnchor.constraint(greaterThanOrEqualTo: self.view.leadingAnchor, constant: 16).isActive = true
         nightAnimation.trailingAnchor.constraint(lessThanOrEqualTo: self.view.trailingAnchor, constant: -16).isActive = true
+        nightAnimation.heightAnchor.constraint(equalTo: nightAnimation.widthAnchor, multiplier: nightAnimation.imageAspectRatio).isActive = true
         
         
     }
     
     override public func viewDidLoad() {
+        super.viewDidLoad()
         for i in 0...3 {
             if let image = UIImage(named: "Night/Night\(i).png") {
                 nightFrames.append(image)
@@ -24,7 +26,10 @@ public class NightViewController: ViewController {
         }
         self.nightAnimation.transform  = CGAffineTransform(scaleX: 0.5, y: 0.5)
         self.nightAnimation.setAnimation(sequence: nightFrames, time: 0.8)
-        self.nightAnimation.startAnimating()
+        let animateTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(animate(tapGestureRecognizer:)))
+        self.nightAnimation.isUserInteractionEnabled = true
+        self.nightAnimation.addGestureRecognizer(animateTapGestureRecognizer)
+        self.nightAnimation.layer.borderWidth = 1
     }
     
 }
