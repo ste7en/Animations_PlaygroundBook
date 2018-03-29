@@ -23,7 +23,7 @@ public class BirthdayViewController: ViewController {
                 birthdayFrames.append(image)
             }
         }
-        self.birthdayAnimation.setAnimation(sequence: birthdayFrames, time: 0.9)
+        self.birthdayAnimation.setAnimation(sequence: birthdayFrames, time: 0.85)
         let animateTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(animate(tapGestureRecognizer:)))
         self.birthdayAnimation.isUserInteractionEnabled = true
         self.birthdayAnimation.addGestureRecognizer(animateTapGestureRecognizer)
