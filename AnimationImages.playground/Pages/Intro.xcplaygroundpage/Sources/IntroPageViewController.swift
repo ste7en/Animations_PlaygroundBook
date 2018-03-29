@@ -112,23 +112,23 @@ extension IntroPageViewController: UIScrollViewDelegate {
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        print("contentSize: \(scrollView.contentSize)")
-        print("contentOffset: \(scrollView.contentOffset)")
-        print("view frame: \(self.view.frame)")
-        print("view bounds: \(self.view.bounds)")
-        print("scroll frame: \(scrollView.frame)")
+//        print("contentSize: \(scrollView.contentSize)")
+//        print("contentOffset: \(scrollView.contentOffset)")
+//        print("view frame: \(self.view.frame)")
+//        print("view bounds: \(self.view.bounds)")
+//        print("scroll frame: \(scrollView.frame)")
         
-        let pageWidth: CGFloat = self.view.bounds.size.width
+        let horizontalContentWidth: CGFloat = scrollView.frame.size.width
+        let horizontalContentOffest: CGFloat = scrollView.contentOffset.x
+        
+        let percentageHorizontalOffset = (horizontalContentOffest - horizontalContentWidth) / horizontalContentWidth
+        
         let currentPage: Int = pageControl.currentPage
         
-        let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.size.width
-        let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
-        
-        let percentageHorizontalOffset: CGFloat = currentHorizontalOffset / maximumHorizontalOffset
-        
-        if percentageHorizontalOffset < 0.5
+        if percentageHorizontalOffset >= 0
         {
-
+            guard currentPage != self.pages.count - 1 else { return }
+            
             self.view.backgroundColor = fadeFromColor(fromColor: backgroundColors[currentPage], toColor: backgroundColors[currentPage + 1], withPercentage: percentageHorizontalOffset)
         }
         else
@@ -136,7 +136,7 @@ extension IntroPageViewController: UIScrollViewDelegate {
             
             guard currentPage != 0 else { return }
 
-            self.view.backgroundColor = fadeFromColor(fromColor: backgroundColors[currentPage - 1], toColor: backgroundColors[currentPage], withPercentage: percentageHorizontalOffset)
+            self.view.backgroundColor = fadeFromColor(fromColor: backgroundColors[currentPage], toColor: backgroundColors[currentPage - 1], withPercentage: abs(percentageHorizontalOffset))
         }
     }
 
