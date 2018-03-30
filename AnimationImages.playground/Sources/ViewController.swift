@@ -37,8 +37,6 @@ open class ViewController: UIViewController {
         self.view.addSubview(self.detailsLabel)
 
         self.detailsLabel.widthAnchor.constraint(lessThanOrEqualToConstant: imageView.frame.size.width).isActive = true
-//        self.detailsLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-//        self.detailsLabel.trailingAnchor.constraint(equalTo:imageView.trailingAnchor).isActive = true
         self.detailsLabel.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
         self.detailsLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8).isActive = true
         self.detailsLabel.bottomAnchor.constraint(lessThanOrEqualTo: self.view.bottomAnchor, constant: -30).isActive = true
