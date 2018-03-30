@@ -7,7 +7,6 @@ public class AnimationsViewController: ViewController {
     let clouds = UIImageView.imageViewForConstraints(image: UIImage(named: "Background/Clouds.png"), contentMode: .scaleAspectFit)
     let bush = UIImageView.imageViewForConstraints(image: UIImage(named: "Background/Bush.png"), contentMode : .scaleAspectFit)
     let leftTrees = UIImageView.imageViewForConstraints(image: UIImage(named: "Background/Trees.png"), contentMode: .scaleAspectFit)
-    var walkingLordLeadingConstraint: NSLayoutConstraint!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -60,24 +59,12 @@ public class AnimationsViewController: ViewController {
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.layoutIfNeeded()
-        
-        // Lord image setting
-        self.view.addSubview(walkingLord)
-        // Autolayout and aspect ratio
-        walkingLord.centerYAnchor.constraint(equalTo: grassView.centerYAnchor).isActive = true
-        self.walkingLordLeadingConstraint = walkingLord.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
-        self.walkingLordLeadingConstraint.isActive = true
-        walkingLord.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.2).isActive = true
-        walkingLord.heightAnchor.constraint(equalTo: walkingLord.widthAnchor, multiplier: walkingLord.imageAspectRatio).isActive = true
-    
     }
     
     public func move(steps: CGFloat, duration: Double) {
         UIView.animate(withDuration: duration, delay: 0.5, options: [.curveLinear], animations: {
-            // Deactivate the leading anchor
-            //self.walkingLordLeadingConstraint.isActive = false
 
-            // Starts the animation
+            // Starts the animation frames
             self.walkingLord.startAnimating()
             
             let translationTransform = CGAffineTransform(translationX: steps*10, y: 0)
@@ -91,7 +78,16 @@ public class AnimationsViewController: ViewController {
     
     public func walk(duration: TimeInterval) {
         move(steps: self.view.bounds.width, duration: duration)
-        
+    }
+    
+    public func addLordToView() {
+        // Lord image setting
+        self.view.addSubview(walkingLord)
+        // Autolayout and aspect ratio
+        walkingLord.centerYAnchor.constraint(equalTo: grassView.centerYAnchor).isActive = true
+        walkingLord.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        walkingLord.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.2).isActive = true
+        walkingLord.heightAnchor.constraint(equalTo: walkingLord.widthAnchor, multiplier: walkingLord.imageAspectRatio).isActive = true
     }
     
 }

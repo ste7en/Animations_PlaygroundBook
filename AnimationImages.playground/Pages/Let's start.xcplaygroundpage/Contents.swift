@@ -7,7 +7,7 @@
  Click on `Run My Code` to find more about Lord, the English Bulldog who will help us through this adventure. Swipe through the pages, click on him to start an animation and find more about him.
  Once you're finished enjoy the next chapter about how to animate an image!
  
- [**Next Page**](@next)
+ [**Next Chapter**](@next)
  */
 
 //#-hidden-code
