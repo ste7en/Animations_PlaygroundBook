@@ -5,6 +5,7 @@ public class BathViewController: ViewController {
     var washingBulldogFrames: [UIImage] = []
     let washingBulldogAnimation: UIImageView = UIImageView.imageViewForConstraints(image: UIImage(named: "WashingBulldog/Washing0.png"), contentMode: .scaleAspectFit)
     public let backgroundColor = UIColor(fromHex: 0xD8F56E)
+    let detailsText: String = "Lord doesn’t like to have a bath, even if he’s so cute when he does."
     
     override public func loadView() {
         super.loadView()
@@ -25,14 +26,17 @@ public class BathViewController: ViewController {
             }
         }
         
-        self.washingBulldogAnimation.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
-        
-        self.washingBulldogAnimation.layer.borderWidth = 1
-        
         self.washingBulldogAnimation.setAnimation(sequence: washingBulldogFrames, time: 1)
         let animateTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(animate(tapGestureRecognizer:)))
         self.washingBulldogAnimation.isUserInteractionEnabled = true
         self.washingBulldogAnimation.addGestureRecognizer(animateTapGestureRecognizer)
+        
+        self.detailsLabel.text = self.detailsText
+    }
+    
+    override public func showDetails(underImage imageView: UIImageView) {
+        super.showDetails(underImage: imageView)
+        detailsLabel.backgroundColor = UIColor(fromHex: 0xB6CF5D)
     }
     
 }

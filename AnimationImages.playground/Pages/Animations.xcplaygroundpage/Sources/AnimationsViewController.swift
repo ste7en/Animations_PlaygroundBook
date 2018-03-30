@@ -69,7 +69,6 @@ public class AnimationsViewController: ViewController {
         self.walkingLordLeadingConstraint.isActive = true
         walkingLord.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.2).isActive = true
         walkingLord.heightAnchor.constraint(equalTo: walkingLord.widthAnchor, multiplier: walkingLord.imageAspectRatio).isActive = true
-        walkingLord.layer.borderWidth = 1
     
     }
     

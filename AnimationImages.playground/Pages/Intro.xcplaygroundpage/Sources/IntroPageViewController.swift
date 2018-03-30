@@ -112,12 +112,6 @@ extension IntroPageViewController: UIScrollViewDelegate {
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-//        print("contentSize: \(scrollView.contentSize)")
-//        print("contentOffset: \(scrollView.contentOffset)")
-//        print("view frame: \(self.view.frame)")
-//        print("view bounds: \(self.view.bounds)")
-//        print("scroll frame: \(scrollView.frame)")
-        
         let horizontalContentWidth: CGFloat = scrollView.frame.size.width
         let horizontalContentOffest: CGFloat = scrollView.contentOffset.x
         
