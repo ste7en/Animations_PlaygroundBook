@@ -67,7 +67,7 @@ public class AnimationsViewController: ViewController {
             // Starts the animation frames
             self.walkingLord.startAnimating()
             
-            let translationTransform = CGAffineTransform(translationX: steps*10, y: 0)
+            let translationTransform = CGAffineTransform(translationX: steps, y: 0)
             self.walkingLord.transform = translationTransform
             
         }, completion: { _ in
@@ -77,7 +77,7 @@ public class AnimationsViewController: ViewController {
     }
     
     public func walk(duration: TimeInterval) {
-        move(steps: self.view.bounds.width, duration: duration)
+        move(steps: self.view.bounds.width/10, duration: duration)
     }
     
     public func addLordToView() {
