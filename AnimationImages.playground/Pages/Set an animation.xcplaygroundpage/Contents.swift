@@ -1,19 +1,18 @@
-//#-hidden-code
+//: [Previous](@previous)
 
+//#-hidden-code
 import UIKit
 import PlaygroundSupport
-
 let animationsViewController = AnimationsViewController()
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = animationsViewController
 
 private var frames: [UIImage] = []
-
 let lord = LordInterface(vc: animationsViewController)
-
 //#-end-hidden-code
 
 /*:
+ ## **On your own**
  **Goal:** Animate a character.
  
  Did you like the animations? Animating a character is really simple, even if it’s a bulldog! Animations like the ones you saw before are composed of lots of [frames](glossary://frame) that change quickly to give you the impression of the movement.
@@ -33,6 +32,8 @@ let lord = LordInterface(vc: animationsViewController)
  1) Set the animation frames .
  2) Set the animation duration in seconds.
  3) Start animating the character with [move()](glossary://move()) or [walk()](glossary://walk()) methods.
+ 
+ Go to next page to enjoy Lord's adventures.
  */
 //#-code-completion(everything, hide)
 //#-code-completion(literal, show, image)
@@ -48,9 +49,6 @@ frames = [#imageLiteral(resourceName: "Walking/bulldog1.png"), #imageLiteral(res
 //#-code-completion(identifier, show, move(steps:duration:), walk(duration:), .)
 //#-code-completion(identifier, show, =)
 //#-code-completion(identifier, show, frame)
-
-
-
 
 
 //: [Next page](@next)

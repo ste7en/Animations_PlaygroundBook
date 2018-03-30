@@ -2,7 +2,7 @@
 <playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
     <pages>
         <page name='Let&apos;s start'/>
-        <page name='Animations'/>
+        <page name='Set an animation'/>
         <page name='Space'/>
     </pages>
 </playground>
