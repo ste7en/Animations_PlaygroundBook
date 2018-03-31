@@ -62,7 +62,7 @@ public class StreetViewController: ViewController {
     }
     
     func drive(speed: Double) {
-        UIView.animate(withDuration: speed, delay: 1.0, options: [.curveLinear], animations: {
+        UIView.animate(withDuration: Double(self.view.frame.size.width)/speed, delay: 1.0, options: [.curveLinear], animations: {
             
             // Starts the animation frames
             self.drivingLord.startAnimating()
@@ -73,9 +73,9 @@ public class StreetViewController: ViewController {
         }, completion: { _ in
             // Stops the animation
             self.drivingLord.stopAnimating()
+            self.drivingLord.removeFromSuperview()
         })
     }
 
-    
 }
 

@@ -5,6 +5,7 @@ public class DrivingLordInterface {
     
     public init(vc: StreetViewController) {
         self.viewController = vc
+        vc.addLordToView()
     }
     
     public var drivingSpeed: Double = 1.0
