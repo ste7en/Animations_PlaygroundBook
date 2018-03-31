@@ -3,6 +3,6 @@
     <pages>
         <page name='Let&apos;s start'/>
         <page name='Set an animation'/>
-        <page name='Space'/>
+        <page name='Move it'/>
     </pages>
 </playground>

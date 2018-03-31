@@ -20,6 +20,11 @@ open class ViewController: UIViewController {
         super.loadView()
         let view = UIView()
         self.view = view
+        self.view.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    override open func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     override open func viewDidLayoutSubviews() {
