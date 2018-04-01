@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Terms</key>
+	<dict>
+		<key>array</key>
+		<dict>
+			<key>FirstUse</key>
+			<dict>
+				<key>Title</key>
+				<string>Set an animation</string>
+				<key>PageReference</key>
+				<string>Chapter2.playgroundchapter/Page1.playgroundpage</string>
+			</dict>
+			<key>Definition</key>
+			<string>An array of objects is a collection of them that is displayed or arranged in a particular way.</string>
+			<key>Title</key>
+			<string>Array</string>
+		</dict>
+		<key>assignment</key>
+		<dict>
+			<key>FirstUse</key>
+			<dict>
+				<key>Title</key>
+				<string>Set an animation</string>
+				<key>PageReference</key>
+				<string>Chapter2.playgroundchapter/Page1.playgroundpage</string>
+			</dict>
+			<key>Definition</key>
+			<string>An assignment is a process in programming in which a value is associated to particular variable. The most commonly used notation is with the `=` sign between variable and value.</string>
+			<key>Title</key>
+			<string>Assignment</string>
+		</dict>
+		<key>drive()</key>
+		<dict>
+			<key>FirstUse</key>
+			<dict>
+				<key>Title</key>
+				<string>Have fun</string>
+				<key>PageReference</key>
+				<string>Chapter2.playgroundchapter/Page3.playgroundpage</string>
+			</dict>
+			<key>Definition</key>
+			<string>The command that lets Lord driving. Do it after setting the driving speed!</string>
+			<key>Title</key>
+			<string>drive()</string>
+		</dict>
+		<key>frame</key>
+		<dict>
+			<key>FirstUse</key>
+			<dict>
+				<key>Title</key>
+				<string>Set an animation</string>
+				<key>PageReference</key>
+				<string>Chapter2.playgroundchapter/Page1.playgroundpage</string>
+			</dict>
+			<key>Definition</key>
+			<string>A single complete picture in a series forming a video.</string>
+			<key>Title</key>
+			<string>Frame</string>
+		</dict>
+		<key>move()</key>
+		<dict>
+			<key>FirstUse</key>
+			<dict>
+				<key>Title</key>
+				<string>Set an animation</string>
+				<key>PageReference</key>
+				<string>Chapter2.playgroundchapter/Page1.playgroundpage</string>
+			</dict>
+			<key>Definition</key>
+			<string>move(steps: , duration: ) is the command that lets Lord move. You have to specify the number of steps and the time of the animation in seconds. </string>
+			<key>Title</key>
+			<string>move()</string>
+		</dict>
+		<key>startAnimating()</key>
+		<dict>
+			<key>FirstUse</key>
+			<dict>
+				<key>Title</key>
+				<string>Set an animation</string>
+				<key>PageReference</key>
+				<string>Chapter2.playgroundchapter/Page1.playgroundpage</string>
+			</dict>
+			<key>Definition</key>
+			<string>Is the command that animates an image, after having set the animation frames.</string>
+			<key>Title</key>
+			<string>startAnimating()</string>
+		</dict>
+		<key>walk()</key>
+		<dict>
+			<key>FirstUse</key>
+			<dict>
+				<key>Title</key>
+				<string>Set an animation</string>
+				<key>PageReference</key>
+				<string>Chapter2.playgroundchapter/Page1.playgroundpage</string>
+			</dict>
+			<key>Definition</key>
+			<string>walk(duration: ) is the command that lets Lord walking. You don&apos;t have to specify the number of steps but only the time of the animation in seconds.</string>
+			<key>Title</key>
+			<string>walk()</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
