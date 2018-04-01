@@ -34,4 +34,12 @@ public class LordInterface {
         }
     }
     
+    public func startAnimating() {
+        self.viewController.walkingLord.startAnimating()
+    }
+    
+    public func stopAnimating() {
+        self.viewController.walkingLord.stopAnimating()
+    }
+    
 }
