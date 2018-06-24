@@ -4,7 +4,7 @@
 
 ### It explains how to do simple animations in UIKit using UIImageViews with alternating frames. You can set some parameters like the duration of the animation.
 
-#### The main character is my English Bulldog, Lord. Every page is like an adventure with him and it has been tought for children. All the assets are vectors and you can find it in the helper folder; their style is  flat design and I used some files from freepik.com 
+#### The main character is my English Bulldog, Lord. Every page is like an adventure with him and it has been thought for children. All the assets are vectors and you can find it in the helper folder; their style is  flat design and I used some files from freepik.com 
 
 
 ![Lord](Helper_files/Screenshots/page0.png)
