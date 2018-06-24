@@ -7,7 +7,7 @@ extension UIImageView {
         return img.size.height/img.size.width
     }
     
-    public class func imageViewForConstraints(image: UIImage?, contentMode: UIViewContentMode? = nil) -> UIImageView {
+    public class func imageViewForConstraints(image: UIImage?, contentMode: UIView.ContentMode? = nil) -> UIImageView {
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         if let _ = contentMode {
